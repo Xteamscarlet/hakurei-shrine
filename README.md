@@ -52,6 +52,9 @@ src/main.js         渲染器、相机、灯光、控制器、装配与渲染循
 - **第三视角**：`OrbitControls`（阻尼、禁用平移、限制俯仰与距离），保证始终能看全整个底座。
 - 阴影使用单主光 + 半球补光 + 冷色轮廓光，`PCFSoftShadowMap`。
 
-## 版本说明
+## 版本关系
 
-仓库当前为**模块化版本**（`index.html` + `src/`）。另有一份 976 行的**单文件版本**（全部内联，自定义轨道控制与暗角），已备份在仓库外部目录，未纳入本仓库。
+同一场景的两个独立实现，分别在两个仓库：
+
+- **本仓库（模块化版）**：`index.html` + `src/` 7 个模块，`OrbitControls` + 反向外壳描边
+- **[hakurei-shrine-single-file](https://github.com/Xteamscarlet/hakurei-shrine-single-file)（单文件版）**：976 行 `index.html` 全部内联，自实现轨道控制（radius/phi/theta + 阻尼）与柔和暗角
